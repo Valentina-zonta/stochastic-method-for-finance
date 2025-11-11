@@ -2,7 +2,7 @@
 
 This repository contains a collection of reports and analyses on fundamental topics in quantitative finance. Each report tackles a specific problem, from option pricing to risk management, by applying theoretical models and comparing them against real-world market data.
 
-##  Table of Contents
+## Table of Contents
 
 Here is a brief description of each report's contents:
 
