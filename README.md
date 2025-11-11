@@ -1,53 +1,53 @@
-# Metodi Stocastici per la Finanza: Report e Analisi
+# Stochastic Methods in Finance: Reports and Analysis
 
-Questo repository contiene una raccolta di report e analisi su temi fondamentali della finanza quantitativa. Ogni report affronta un problema specifico, dall'option pricing alla gestione del rischio, applicando modelli teorici e confrontandoli con dati di mercato reali.
+This repository contains a collection of reports and analyses on fundamental topics in quantitative finance. Each report tackles a specific problem, from option pricing to risk management, by applying theoretical models and comparing them against real-world market data.
 
-## 📚 Sommario dei Report
+##  Table of Contents
 
-Ecco una breve descrizione del contenuto di ciascun report:
+Here is a brief description of each report's contents:
 
 ### Report 1: One-Period Binomial Model
-* **Obiettivo:** Prezzare una call option sull'asset Supermicro (SMCI) usando il modello binomiale a un periodo.
-* **Metodologia:** Il modello viene applicato a opzioni con scadenza a 3 e 6 mesi. La volatilità storica viene calcolata e usata per trovare il prezzo teorico, che viene poi confrontato con il prezzo di mercato.
-* **Risultato:** L'analisi evidenzia i limiti di un modello così semplice, mostrando un errore significativo (23-24%) rispetto ai prezzi reali.
+* [cite_start]**Objective:** To price a call option on the asset Supermicro (SMCI) using the one-period binomial model[cite: 5].
+* [cite_start]**Methodology:** The model is applied to options with 3-month and 6-month maturities[cite: 8]. [cite_start]Historical volatility is calculated and used to find the theoretical price, which is then compared to the market price[cite: 53, 54, 58, 69, 70, 74, 78].
+* [cite_start]**Result:** The analysis highlights the limitations of this simple model, revealing a significant error (23-24%) compared to real-world prices[cite: 77, 93, 98, 99].
 
-### Report 2: Calcolo dei Dividendi (Box-Spread & Put-Call Parity)
-* **Obiettivo:** Tentare di calcolare i dividendi impliciti nelle opzioni di Morgan Stanley (MS).
-* **Metodologia:** Vengono applicate due tecniche: la strategia **Box-Spread** e la **Put-Call Parity**.
-* **Risultato:** I risultati sono inaspettati (es. dividendi negativi). Questo report dimostra un'importante lezione pratica: i modelli teorici (validi per opzioni Europee) falliscono se applicati erroneamente a opzioni Americane, come quelle usate nell'analisi.
+### Report 2: Calculating Implied Dividends (Box-Spread & Put-Call Parity)
+* [cite_start]**Objective:** To attempt to calculate the dividends implied in Morgan Stanley (MS) options[cite: 340, 341].
+* [cite_start]**Methodology:** Two techniques are applied: the **Box-Spread** strategy [cite: 359, 401] [cite_start]and **Put-Call Parity**[cite: 370, 401].
+* [cite_start]**Result:** The analysis yields unexpected results, such as negative implicit dividends[cite: 430, 435]. [cite_start]This report demonstrates a key practical lesson: theoretical models valid for European options will fail if misapplied to American options, which were used in this analysis[cite: 398, 432, 433, 434].
 
-### Report 3: Convergenza dei Modelli di Pricing
-* **Obiettivo:** Confrontare la velocità di convergenza di diversi modelli di pricing discreto rispetto alla formula analitica di Black-Scholes.
-* **Metodologia:** Vengono messi a confronto il **Modello Binomiale N-step** e il **Modello Leisen-Reimer (L-R)**.
-* **Risultato:** Entrambi i modelli convergono al prezzo di Black-Scholes all'aumentare del numero di passi (N). Tuttavia, si dimostra che il modello Leisen-Reimer è molto più efficiente, convergendo più rapidamente e con maggiore precisione.
+### Report 3: Convergence of Pricing Models
+* [cite_start]**Objective:** To compare the convergence speed of discrete-time pricing models against the analytical Black-Scholes formula[cite: 877, 879].
+* [cite_start]**Methodology:** The **N-step Binomial Model** [cite: 882] [cite_start]and the **Leisen-Reimer (L-R) Model** [cite: 911] are compared head-to-head.
+* [cite_start]**Result:** Both models converge to the Black-Scholes price as the number of steps (N) increases[cite: 908, 1029]. [cite_start]However, the L-R model is shown to be far more efficient, converging faster and with greater accuracy for a smaller number of steps[cite: 969, 1027, 1028].
 
-### Report 4: Analisi delle "Greche"
-* **Obiettivo:** Calcolare, visualizzare e analizzare le "Greche" (Delta, Gamma, Vega, Theta, Rho), ovvero le sensibilità del prezzo di un'opzione.
-* **Metodologia:**
-    1.  **Teoria:** Vengono generate superfici 3D per ogni Greca usando le formule di Black-Scholes (tramite VBA).
-    2.  **Pratica:** Si analizzano i dati di mercato reali (da Refinitiv) per l'asset Adyen NV (ADYEN.AS), mostrando il fenomeno dell'"implied volatility smile".
-* **Risultato:** I valori teorici calcolati vengono confrontati con i dati di mercato, analizzando le differenze.
+### Report 4: Analysis of "The Greeks"
+* [cite_start]**Objective:** To calculate, visualize, and analyze the "Greeks" (Delta, Gamma, Vega, Theta, Rho), which measure an option's price sensitivity[cite: 1333, 1340, 1345].
+* **Methodology:**
+    1.  [cite_start]**Theory:** 3D surfaces are generated for each Greek using the Black-Scholes formulas (via VBA)[cite: 1373, 1377].
+    2.  [cite_start]**Practice:** Real-world market data (from Refinitiv) for Adyen NV (ADYEN.AS) is analyzed, showing the "implied volatility smile" phenomenon[cite: 1334, 1577, 1581].
+* [cite_start]**Result:** The calculated theoretical values are compared against market data, and the discrepancies are analyzed[cite: 1336, 1590].
 
-### Report 5: Metodi Monte Carlo per l'Option Pricing
-* **Obiettivo:** Utilizzare metodi di simulazione Monte Carlo (MC) per prezzare diverse tipologie di opzioni.
-* **Metodologia:** Sfruttando simulazioni basate sul Moto Browniano Geometrico (GBM), vengono prezzate:
-    * **Opzioni Vanilla:** Confrontando il risultato MC con Black-Scholes.
-    * **Opzioni Esotiche (Path-Dependent):** Opzioni Asiatiche e Opzioni Lookback.
-    * **Certificati:** Viene prezzato un certificato "Worst-Of" su un paniere di 3 asset (NVDA, MSFT, GOOGL).
+### Report 5: Monte Carlo Methods for Option Pricing
+* [cite_start]**Objective:** To use Monte Carlo (MC) simulation methods to price various types of options[cite: 106].
+* [cite_start]**Methodology:** Leveraging simulations based on Geometric Brownian Motion (GBM)[cite: 112, 177], prices are calculated for:
+    * [cite_start]**Vanilla Options:** Comparing the MC result with the Black-Scholes formula[cite: 193, 205].
+    * [cite_start]**Exotic (Path-Dependent) Options:** Asian Options [cite: 134, 259] [cite_start]and Lookback Options[cite: 148, 259].
+    * [cite_start]**Certificates:** A "Worst-Of" certificate on a basket of 3 assets (NVDA, MSFT, GOOGL) is priced[cite: 109, 310, 313].
 
-### Report 6: Analisi del Value at Risk (VaR)
-* **Obiettivo:** Calcolare e confrontare diverse metodologie per la stima del Value at Risk (VaR).
-* **Portafoglio:** Un portafoglio bilanciato composto da McDonald's (MCD) e Yum! Brands (YUM).
-* **Metodologia:** Il VaR viene calcolato utilizzando 5 approcci distinti:
-    1.  Parametrico Normale (sigma flat)
-    2.  Parametrico Normale (con volatilità EWMA)
-    3.  Simulazione Monte Carlo
-    4.  VaR Storico
-    5.  Simulazione Storica
-* **Risultato:** Oltre al confronto, l'analisi investiga la **subadditività**, dimostrando come il VaR del portafoglio non sia sempre inferiore alla somma dei VaR individuali, evidenziando un limite noto di questa metrica di rischio.
+### Report 6: Value at Risk (VaR) Analysis
+* [cite_start]**Objective:** To calculate and compare different methodologies for estimating Value at Risk (VaR)[cite: 442, 443].
+* **Portfolio:** A balanced portfolio composed of McDonald's (MCD) and Yum! [cite_start]Brands (YUM)[cite: 442, 543].
+* **Methodology:** VaR is calculated using 5 distinct approaches:
+    1.  [cite_start]Parametric Normal (flat sigma) [cite: 444, 585]
+    2.  [cite_start]Parametric Normal (with EWMA volatility) [cite: 445, 636]
+    3.  [cite_start]Monte Carlo Simulation [cite: 446, 693]
+    4.  [cite_start]Historical VaR (percentile method) [cite: 447, 518, 755]
+    5.  [cite_start]Historical Simulation (sampling from historical distribution) [cite: 447, 522, 808]
+* [cite_start]**Result:** Beyond the comparison, the analysis investigates **subadditivity**, demonstrating that the portfolio's VaR is not always less than the sum of its parts, highlighting a well-known limitation of this risk metric[cite: 448, 449, 862, 863, 871].
 
-## 🛠️ Strumenti Utilizzati
+## 🛠️ Tools Used
 
-* **VBA (Visual Basic for Applications)** per l'implementazione dei modelli in Excel.
-* **Python** (probabilmente con `pandas`, `numpy`, `matplotlib`) per le analisi VaR e la generazione dei grafici.
-* **Refinitiv Eikon** come fonte per i dati di mercato.
+* [cite_start]**VBA (Visual Basic for Applications)** for implementing models in Excel[cite: 177, 924, 1333, 1589].
+* **Python** (likely with `pandas`, `numpy`, `matplotlib`) for VaR analysis and plot generation.
+* [cite_start]**Refinitiv Eikon** as the source for market data[cite: 543, 1576, 1659].
